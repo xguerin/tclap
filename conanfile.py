@@ -2,7 +2,7 @@ from conans import ConanFile, tools
 
 class TclapConan(ConanFile):
     name = "tclap"
-    version = "1.2.2"
+    version = "1.2.3"
     license = "MIT License"
     author = "Michael E. Smoot"
     url = "http://github.com/xguerin/tclap"
