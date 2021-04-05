@@ -10,7 +10,7 @@ AC_DEFUN([HAVE_WARN_EFFECTIVE_CXX],
 [
 AC_REQUIRE([AC_PROG_CXX])
 AC_MSG_CHECKING([whether the C++ compiler (${CXX}) accepts -Weffc++])
-AC_CACHE_VAL([cv_warn_effective_cxx],
+AC_CACHE_VAL([_cv_warn_effective_cxx],
 [
 AC_LANG_SAVE
 AC_LANG_CPLUSPLUS

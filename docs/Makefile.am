@@ -1,14 +1,7 @@
-
 if DOC
 
 all:
 	@DOXYGEN@ Doxyfile
-
-else
-
-all:
-
-endif
 
 EXTRA_DIST = manual.xml
 dist_doc_DATA = index.html manual.html style.css
@@ -30,3 +23,8 @@ clean-local:
 	$(RM) -rf $(abs_builddir)/html/*
 	$(RM) -rf $(abs_builddir)/doxygen_sqlite3.db
 
+else
+
+all:
+
+endif

@@ -1,8 +1,8 @@
-AC_INIT(Makefile.am)
-#AC_PREREQ(2.50)
+AC_INIT([tclap], [1.2.3])
+AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(config)
 AM_CONFIG_HEADER(config/config.h)
-AM_INIT_AUTOMAKE(tclap,1.2.3)
+AM_INIT_AUTOMAKE
 AC_PROG_CXX
 AC_CXX_HAVE_SSTREAM
 AC_CXX_HAVE_STRSTREAM
@@ -17,7 +17,7 @@ CXXFLAGS="$CXXFLAGS $WARN_EFFECTIVE_CXX"
 
 AM_CONDITIONAL([HAVE_GNU_COMPILERS], [test x$ac_cv_cxx_compiler_gnu = xyes])
 
-AC_OUTPUT([ Makefile \
+AC_CONFIG_FILES([ Makefile \
 	   tclap.pc \
            examples/Makefile \
 		   include/Makefile \
@@ -27,5 +27,7 @@ AC_OUTPUT([ Makefile \
 		   docs/Doxyfile  \
 		   msc/Makefile  \
 		   msc/examples/Makefile  \
-		   tests/Makefile], \
-		   [chmod a+x $ac_top_srcdir/tests/*.sh])
+		   tests/Makefile])
+AC_CONFIG_COMMANDS([default],[\
+		   chmod a+x $ac_top_srcdir/tests/*.sh],[])
+AC_OUTPUT
