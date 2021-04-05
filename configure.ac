@@ -1,4 +1,5 @@
-AC_INIT([tclap], [1.2.3])
+AC_INIT([tclap], [1.2.4])
+
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(config)
 AM_CONFIG_HEADER(config/config.h)
@@ -18,16 +19,18 @@ CXXFLAGS="$CXXFLAGS $WARN_EFFECTIVE_CXX"
 AM_CONDITIONAL([HAVE_GNU_COMPILERS], [test x$ac_cv_cxx_compiler_gnu = xyes])
 
 AC_CONFIG_FILES([ Makefile \
-	   tclap.pc \
-           examples/Makefile \
-		   include/Makefile \
-		   include/tclap/Makefile \
-		   config/Makefile \
-		   docs/Makefile \
-		   docs/Doxyfile  \
-		   msc/Makefile  \
-		   msc/examples/Makefile  \
-		   tests/Makefile])
+	tclap.pc \
+  examples/Makefile \
+	include/Makefile \
+	include/tclap/Makefile \
+	config/Makefile \
+	docs/Makefile \
+	docs/Doxyfile  \
+	msc/Makefile  \
+	msc/examples/Makefile  \
+	tests/Makefile])
+
 AC_CONFIG_COMMANDS([default],[\
 		   chmod a+x $ac_top_srcdir/tests/*.sh],[])
+
 AC_OUTPUT
