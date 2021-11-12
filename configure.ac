@@ -1,4 +1,4 @@
-AC_INIT([tclap], [1.2.4])
+AC_INIT([tclap], [1.2.5])
 
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(config)
